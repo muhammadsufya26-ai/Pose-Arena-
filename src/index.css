@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-outfit: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  body {
+    font-family: var(--font-outfit);
+    background-color: #030712;
+    color: #f8fafc;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Arcade Vignette */
+.arcade-vignette {
+  background: radial-gradient(
+    circle at center,
+    rgba(3, 7, 18, 0.25) 30%,
+    rgba(3, 7, 18, 0.75) 85%,
+    rgba(3, 7, 18, 0.95) 100%
+  );
+  pointer-events: none;
+}
+
+@keyframes pulse-arcade {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.4);
+  }
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 0 45px rgba(16, 185, 129, 0.7);
+  }
+}
+
+.animate-pulse-arcade {
+  animation: pulse-arcade 1.8s ease-in-out infinite;
+}

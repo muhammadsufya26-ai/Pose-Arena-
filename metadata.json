@@ -1,0 +1,6 @@
+{
+  "name": "Pose Arena",
+  "description": "High-energy motion-controlled interactive arcade game powered by MediaPipe Hands finger tracking and dynamic canvas physics.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
